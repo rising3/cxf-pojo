@@ -8,7 +8,6 @@ public class ProviderSpring {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		
 		new ClassPathXmlApplicationContext("provider-beans.xml");
 
 		System.out.println("Service ready...");

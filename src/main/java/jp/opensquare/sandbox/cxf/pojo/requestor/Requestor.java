@@ -19,7 +19,6 @@ public class Requestor {
 		clientfactory.getInInterceptors().add(new LoggingInInterceptor());
 		clientfactory.getOutInterceptors().add(new LoggingOutInterceptor());
 
-		// Create Client
 		Hello client = (Hello)clientfactory.create();
 		String result = client.sayHi("Apache CXF");
 		System.out.println("result: " + result);

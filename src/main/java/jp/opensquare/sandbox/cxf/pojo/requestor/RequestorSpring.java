@@ -13,7 +13,6 @@ public class RequestorSpring {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("requestor-beans.xml");
 
-		// Create Client
 		Hello client = (Hello)context.getBean("helloService");
 		String result = client.sayHi("Apache CXF");
 		System.out.println("result: " + result);

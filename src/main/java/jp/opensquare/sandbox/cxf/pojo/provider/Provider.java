@@ -10,13 +10,9 @@ public class Provider {
 	}
 
 	private void publish() {
-		// Create service implementation
-		HelloImpl helloCxfImpl = new HelloImpl();
-
-		// Create Server
 		ServerFactoryBean serverFactory = new ServerFactoryBean();
 		serverFactory.setServiceClass(Hello.class);
-		serverFactory.setServiceBean(helloCxfImpl);
+		serverFactory.setServiceBean(new HelloImpl());
 		serverFactory.setAddress("http://localhost:9000/helloService");
 		serverFactory.getInInterceptors().add(new LoggingInInterceptor());
 		serverFactory.getOutInterceptors().add(new LoggingOutInterceptor());

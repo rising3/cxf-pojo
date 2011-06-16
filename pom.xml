@@ -5,11 +5,15 @@
 	<artifactId>cxf-pojo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<name>cxf-pojo</name>
+	<description>Code sample illustrates how to develop a service using the &quot;apache CXF and Spring Framework&quot; approach with the POJO.
+</description>
+	<url>http://opensquare.jp/wiki/index.php?cxf</url>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cxf.version>2.4.1</cxf.version>
 	</properties>
 	<build>
-		<finalName>cxf-simple</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -119,7 +123,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<artifactId>cxf-rt-frontend-simple</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
 		<dependency>
@@ -127,6 +131,7 @@
 			<artifactId>cxf-rt-transports-http</artifactId>
 			<version>${cxf.version}</version>
 		</dependency>
+		<!-- Jetty is needed if you're using the CXFServlet -->
 		<dependency> <groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-transports-http-jetty</artifactId> 
 			<version>${cxf.version}</version>
